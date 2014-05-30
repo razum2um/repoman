@@ -7,5 +7,7 @@
   :main ^:skip-aot repoman.core
   :target-path "target/%s"
   :profiles {
-             :dev {:dependencies [[midje "1.5.1"]]}
+             :dev {
+                   :plugins [[lein-midje "3.1.3"]]
+                   :dependencies [[midje "1.5.1"]]}
              :uberjar {:aot :all}})
