@@ -6,4 +6,6 @@
   :dependencies [[org.clojure/clojure "1.5.1"]]
   :main ^:skip-aot repoman.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {
+             :dev {:dependencies [[midje "1.5.1"]]}
+             :uberjar {:aot :all}})
