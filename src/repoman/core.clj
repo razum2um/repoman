@@ -2,7 +2,7 @@
   (:gen-class))
 
 (defn first-element [sequence default]
-  (if (empty? sequence)
+  (if (nil? sequence)
     default
     (first sequence)))
 
