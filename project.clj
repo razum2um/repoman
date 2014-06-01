@@ -7,6 +7,7 @@
                  [cheshire "5.3.1"]
                  [korma "0.3.1"]
                  [environ "0.5.0"]
+                 [clj-time "0.7.0"]
                  [postgresql/postgresql "9.1-901.jdbc4"]
                  [clj-http "0.9.2"]]
   :main ^:skip-aot repoman.core

@@ -1,15 +1,8 @@
 (ns repoman.core-test
   (:use midje.sweet)
-  (:require [repoman.core :refer :all]))
+  (:require [repoman.core :refer :all]
+            [clj-time.core :as t]
+            [clj-time.coerce :as c]))
 
-(facts "about `first-element`"
-  (fact "it normally returns the first element"
-    (first-element [1 2 3] :default) => 1
-    (first-element '(1 2 3) :default) => 1)
-
-  ;; I'm a little unsure how Clojure types map onto the Lisp I'm used to.
-  (fact "default value is returned for empty sequences"
-    (first-element [] :default) => :default
-    (first-element '() :default) => :default
-    (first-element nil :default) => :default
-    (first-element (filter even? [1 3 5]) :default) => :default))
+(facts "about `sql-current_time`"
+  (c/from-sql-time (sql-current-time 1388534400000)) => (t/date-time 2014 1 1))
